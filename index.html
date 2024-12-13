@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Password-Generator</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
-        .container{
+
+        .container {
             padding-top: 12%;
 
             width: 100%;
             min-height: 100vh;
-            background: linear-gradient(90deg,rgb(120, 81, 105),rgb(80, 58, 98));
+            background: linear-gradient(90deg, rgb(120, 81, 105), rgb(80, 58, 98));
             padding-left: 12%;
             padding-right: 10%;
 
         }
-        .head .one{
+
+        .head .one {
             color: white;
             font-size: 45px;
 
-            
+
 
         }
-        .head .two{
+
+        .head .two {
             color: rgb(43, 1, 27);
             font-size: 34px;
         }
 
-        .line{
+        .line {
             margin-top: 10px;
             background-color: rgb(249, 249, 247);
             height: 2px;
             max-width: 350px;
-            
+
         }
-        .password-cont{
+
+        .password-cont {
             margin-top: 40px;
             padding: 16px;
             max-width: 350px;
@@ -52,13 +57,27 @@
             align-items: center;
             justify-content: space-between;
             border-radius: 8px;
-            
-            
+
+
         }
-        .password-cont p{
+
+        .password-cont p {
             font-size: 17px;
         }
-        button{
+
+        .password-cont img {
+            width: 17px;
+            height: 17px;
+            margin-right: 10px;
+            cursor: pointer;
+
+
+        }
+        .password-cont img:active{
+            transform: translateY(1px);
+        }
+
+        button {
             margin-top: 15px;
             border: none;
             border-radius: 7px;
@@ -68,30 +87,35 @@
             justify-content: center;
             align-items: center;
             gap: 5px;
+            cursor: pointer;
         }
-        button span{
+
+        button:active {
+            transform: translateY(2px);
+        }
+
+        button span {
             font-size: 14px;
 
         }
-
-
-
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="head">
             <h1 class="one">Generate a</h1>
             <h1 class="two">Random Password ...</h1>
         </div>
-        <div class="line">
-            
+
+        <div class="line"></div>
+
+        <div id="display" class="password-cont">
+            <!-- <p>1234567890er</p> -->
+            <img src="copy.png" alt="copy">
         </div>
-        <div class="password-cont">
-            <p>1234567890er</p>
-            <img style="width: 17px; height: 17px; margin-right: 10px; color: red;" src="copy.png" alt="copy">
-        </div>
-        <button>
+        
+        <button onclick="Generate()">
             <i style="color: rgb(43, 1, 27); ;" class="fa-solid fa-bolt"></i>
             <span>Generate Password</span>
 
@@ -101,10 +125,11 @@
 
 
 
-    
+
 
 
 
     <script src="script.js"></script>
 </body>
+
 </html>
