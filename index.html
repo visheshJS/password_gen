@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container{
+            padding-top: 12%;
+
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(90deg,rgb(120, 81, 105),rgb(80, 58, 98));
+            padding-left: 12%;
+            padding-right: 10%;
+
+        }
+        .head .one{
+            color: white;
+            font-size: 45px;
+
+            
+
+        }
+        .head .two{
+            color: rgb(43, 1, 27);
+            font-size: 34px;
+        }
+
+        .line{
+            margin-top: 10px;
+            background-color: rgb(249, 249, 247);
+            height: 2px;
+            max-width: 350px;
+            
+        }
+        .password-cont{
+            margin-top: 40px;
+            padding: 16px;
+            max-width: 350px;
+            background-color: white;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 8px;
+            
+            
+        }
+        .password-cont p{
+            font-size: 17px;
+        }
+        button{
+            margin-top: 15px;
+            border: none;
+            border-radius: 7px;
+            padding: 16px 5px;
+            width: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+        button span{
+            font-size: 14px;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h1 class="one">Generate a</h1>
+            <h1 class="two">Random Password ...</h1>
+        </div>
+        <div class="line">
+            
+        </div>
+        <div class="password-cont">
+            <p>1234567890er</p>
+            <img style="width: 17px; height: 17px; margin-right: 10px; color: red;" src="copy.png" alt="copy">
+        </div>
+        <button>
+            <i style="color: rgb(43, 1, 27); ;" class="fa-solid fa-bolt"></i>
+            <span>Generate Password</span>
+
+        </button>
+
+    </div>
+
+
+
+    
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
