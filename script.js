@@ -22,28 +22,53 @@ const allCharacters = [
     // Other Symbols from Keyboard
     '`', '~', '-', '_', '=', '+', '[', '{', ']', '}', '|', ';', ':', ',', '<', '.', '>', '/', '?'
 ];
-const empty=[];
 
-
+const copyImg = document.getElementById("copy-btn");
 const passContainer = document.querySelector(".password-cont");
 
-function Generate(){
-    for(let i =1; i<=12;i++){
-        let char = Math.floor(Math.random()*(allCharacters-1).length);
-        empty.push(char);
 
-        for(let i=1;i<=char.length;i++){
-            let pass = document.createElement("p");
-            pass.innerText=char[i];
-            passContainer.prepend(pass);
-        }
+
+function Generate_12(){
+    const passElements = passContainer.querySelectorAll("p");
+    passElements.forEach(element => element.remove());
+    
+
+    let pass ="";
+
+    for(let i =1; i<=12;i++){
+        let random_index = Math.floor(Math.random()*allCharacters.length);
+        pass+= allCharacters[random_index];
+
+
     }
 
+    let newpassElement = document.createElement("p");
+    newpassElement.innerText =pass;
+    if(newpassElement){
+        passContainer.prepend(newpassElement);
+        
+        
+    }else{
+        alert(`no password existing`);
+    }
     
-    
+
+
 }
 
-Generate();
+
+copyImg.addEventListener("click",() => {
+    const passTxt = passContainer.querySelector("p").innerText;
+    navigator.clipboard.writeText(passTxt)
+        .then(() => {
+            alert(`Password copied to clipboard!`); // Success message
+        })
+        .catch(err => {
+            alert(`Failed to copy password: ` + err); // Error handling
+        });
+  
+
+});
 
 
 
