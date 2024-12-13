@@ -21,17 +21,35 @@
         <div id="display" class="password-cont">
             <!-- <p>1234567890er</p> -->
 
-            <img id="copy-btn" src="copy.png" alt="copy">
+            <img id="copy-btn" src="black.png" alt="copy">
 
 
 
         </div>
 
-        <button onclick="Generate_12()">
-            <i style="color: rgb(43, 1, 27); ;" class="fa-solid fa-bolt"></i>
-            <span>Generate Password</span>
 
-        </button>
+        <div class="password-generator">
+            <div class="selection">
+                <label for="password-length">Select Password Length:</label>
+                <select id="password-length">
+                    <option value="4">4 Characters</option>
+                    <option value="6">6 Characters</option>
+                    <option value="8">8 Characters</option>
+                    <option value="10">10 Characters</option>
+                    <option value="12" selected>12 Characters</option>
+                </select>
+
+            </div>
+
+
+
+            <button onclick="Generate()">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Generate Password</span>
+
+            </button>
+        </div>
+
 
     </div>
 
